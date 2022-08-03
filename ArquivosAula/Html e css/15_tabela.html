@@ -1,0 +1,158 @@
+<!doctype html>
+<!--doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+ <title> pagina de exemplo estrutura basica</title>
+ <meta charset="urf-8">
+ <meta name="author" content="Harrison">
+ <meta name="description" content="Lista de documento">
+ <meta name="keywords" content="html5, tecnologia">
+
+ <style>
+ body{
+     font-family: sans-serif;
+ }
+ td{
+     border: 1px solid black;
+ }
+
+ /*Deixa as celulas coladas uma na outra*/
+ /*configuração da tabela*/
+ table{
+     border-collapse: collapse;
+     width:80%;
+     margin: auto;
+     background: beige;
+ }
+
+ th{
+     background: #bfc361;
+     border: 2px solid chocolate;
+     padding: 15px;
+ }
+ 
+ 
+ 
+ td{
+     border: 1px solid black;
+     text-align:center;
+     padding:10px;
+ }
+
+ </style>
+
+
+ 
+ 
+
+
+ 
+</head>
+
+    <body>
+        
+        <!--Criação da tabela-->
+        <table>
+            <!--caption:usada para acessibilidade-->
+            <caption>Tabela de preços de cursos</caption>
+             <!--thead:Cabeçalho da tabela-->
+            <thead>
+                <!--tr: Criação das linhas da tabela-->
+                <tr>
+                      <!--th: Criação das colunas da tabela no header da tabela-->
+                    <th>Área</th>
+                    <th>Curso</th>
+                    <th>Ivestimento</th>
+
+                </tr>
+
+
+            </thead>
+
+            <tfoot>
+                   
+                <tr>
+                    <!--td: criação das colunas da tabela-->
+                    <!--colspan: idica a quantidade de colunas que ele vale-->
+                    <td colspan="3">Valores sujeitos a alterações sem prévio aviso</td>
+
+
+                </tr>
+
+               <!--tfoot: rodape da tabela--> 
+            </tfoot>
+             <!--tbody: corpo da tabela-->
+            <tbody>
+               <tr>
+                <!--rowspan: Idica a quantidade de linhas que ele ocupa-->
+                <td rowspan="3">Design</td>
+                <td>InDesing</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+
+                
+                <td>Photoshop</td>
+                <td>R$ 1.000,00</td>
+
+            </tr>
+         
+            <tr>
+
+              
+                <td>Illustrator</td>
+                <td>R$ 1.000,00</td>
+
+            </tr>
+         
+
+          <tr>  
+           
+            <td rowspan="4">Development</td>
+            <td>HTML</td>
+            <td>R$ 1.000,00</td>
+         
+           </tr>
+
+
+           <tr>  
+           
+            
+            <td>CSS</td>
+            <td>R$ 1.000,00</td>
+         
+           </tr>
+
+
+           <tr>  
+           
+            
+            <td>Javascript</td>
+            <td>R$ 1.000,00</td>
+         
+           </tr>
+
+
+           <tr>  
+           
+            
+            <td>PHP</td>
+            <td>R$ 1.000,00</td>
+         
+           </tr>
+
+
+            </tbody>
+
+
+        </table>
+ 
+
+
+
+    </body>
+</html>
+
+
+

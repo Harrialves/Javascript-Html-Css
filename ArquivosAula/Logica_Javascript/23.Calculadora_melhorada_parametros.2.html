@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- criação dos botões da calculadora com as funções como parametro -->
+        <h1>Lógica de programação com Javascript</h1>
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('*')">*</button>
+        <button onclick="iniciarCalculo('/')">/</button>
+            <!--Div onde será mostrado os resultados  -->
+            <div id="output"></div>
+
+        <script>
+            // criação da varial global 
+            var n2=parseFloat(prompt("Digite um número"));
+            
+            escreve(n2);
+
+            function iniciarCalculo(simbolo){
+               
+                 var n1 = document.querySelector("#output").textContent;
+                n1 = parseFloat(n1);
+                var n2 = parseFloat(prompt("Digite outro número"));
+                // trata das exceções que ocrrem na execução do programa 
+                
+                try{
+                    var msg =calcular(simbolo, n1, n2);
+                // recupera o erro e mostra na tela atráves do alert
+                }catch(e){
+                    alert(e);
+                    return
+        
+                }
+                escreve(msg);
+            }
+
+            // função que escreve os valores na tela 
+            function escreve(mensagem){
+                var output = document.querySelector("#output");
+                output.innerHTML = mensagem;
+                
+            }
+            
+            //função que calcula atravês de um valor pasado pelo parametro o resultado da operação    
+            function calcular(simbolo,n1,n2){
+                // 
+                console.log(simbolo)
+                
+                if(simbolo !=='+'&& simbolo !=='-'&& simbolo !=='*' && simbolo !=='/'){
+                    // dispara um erro no console e para a execução do programa.
+                    throw new Error("Digite um simbolo valido");
+                }
+                
+                if(isNaN (n1) || isNaN(n2)){
+                    throw new Error("Somente números");
+                  
+                    
+                }
+
+                
+                var numeroCalculado = null;
+                
+                switch(simbolo){
+                    case '+':
+                        numeroCalculado= n1+n2;
+                        break; 
+                    
+                    case '-':
+                        numeroCalculado= n1-n2;
+                        break; 
+                    
+                    case '*':
+                        numeroCalculado= n1*n2;
+                        break; 
+                    
+                    case '/':
+                        numeroCalculado= n1/n2;
+                            
+                }
+
+                return numeroCalculado;
+                    
+                    
+            }
+            
+
+
+        </script>
+
+    </body>
+</html>

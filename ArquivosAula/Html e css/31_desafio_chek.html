@@ -1,0 +1,104 @@
+<!doctype html>
+<!--doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+ <title> pagina de exemplo estrutura basica</title>
+ <meta charset="urf-8">
+ <meta name="author" content="Harrison">
+ <meta name="description" content="Lista de documento">
+ <meta name="keywords" content="html5, tecnologia">
+ 
+ <style>
+     
+     body{
+         font-family: sans-serif;
+     }
+
+     label{
+         margin-right: 25px;
+     }
+     /* criação da checkbox personalizada */
+     label span{
+         display:inline-block;
+         border: 2px solid #bbb;
+         background-color: #ddd;
+         width: 54px;
+         height: 25px;
+         margin-right: 10px;
+         border-radius: 50px;
+     }
+
+       
+     /* before sempre tem content:';' */
+     label span:before{
+         content:'';
+         display:block;
+         background-color:white;
+         width: 20px;
+         height: 20px;
+         border-radius: 50%;
+         margin: 3px;
+         transition: all .2s ease-in-out;
+       
+     }
+    
+     /* cor do checkbox quando marcado */
+     label input:checked + span:before{
+         transform: translate(25px);
+         background-color:red;
+     }
+     /* mostra a cor vermelha quando o checkbox está com o foco */
+     label input:focus+span{
+      box-shadow: 0 0 0 2px red;
+     }
+
+     /* esconde o checkbox padrão */
+     input{
+         width: 0px;
+         height: 0px;
+         
+     }
+ 
+   
+   
+
+   
+
+
+ </style>
+
+
+  
+ 
+ </head>
+
+    <body>
+
+        
+            <label>
+            <input type="checkbox">
+            <span  ></span>
+             Esporte
+            </label>
+    
+            <label>
+            <input  type="checkbox">
+            <span ></span>
+             Politica
+            </label>
+            
+            <label >
+            <input  type="checkbox">
+            <span  ></span>
+            Educação
+            </label>
+    
+       
+
+
+
+    </body>
+</html>
+
+
+

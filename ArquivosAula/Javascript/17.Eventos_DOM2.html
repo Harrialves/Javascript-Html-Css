@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <div class="container">
+        <h1>Curso Javascript</h1>
+
+        <!-- DOM nivel 0 no HTML -->
+        <button id="btn1" onclick="clicar()">botao 1</button>
+        <button id="btn2">botao 2</button>
+        <button id="btn3">botao 3</button>
+    </div>
+
+    <script>
+        // DOM nivel 0 no javascript 
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+        
+        btn2.onclick= clicar; 
+        
+        function clicar(){
+           alert("clicou"); 
+
+        }
+        // DOM nivel 2 com 2 eventos 
+        btn3.addEventListener("click",function(){
+            alert("clicou com o dom level 2"); 
+        });
+        btn3.addEventListener("click",function(){
+            alert("clicou com o dom level 2 com outro evento"); 
+        });
+
+     
+         
+
+
+
+    </script>
+
+
+
+    </body>
+
+   
+
+
+</html>

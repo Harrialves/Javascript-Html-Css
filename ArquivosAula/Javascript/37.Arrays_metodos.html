@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript</h1>
+        <script>
+            
+            var arr= ["1",20,3,4,5,"kjsk", 20, "30"];
+            // every: apenas se todos os elementos do array forem numeros *nesse exemplo* ira ser true
+            var sohNumeros= arr.every(function(el){
+            
+                return typeof el === "number"; 
+            });
+            console.log(sohNumeros);
+
+            // some: apenas se um elemento do array for número *nesse exemplo* ira ser true
+            var aoMenosUmNumero= arr.some(function(el){
+            
+                return typeof el === "number"; 
+            });
+            console.log(aoMenosUmNumero);
+            // filter: filtra e exibe apenas os números *nesse exemplo*
+            var numeros = arr.filter(function(el, i, arr){
+                return typeof el === "number";
+            });
+            console.log(numeros);
+            
+            // forEach: laço de que repetição, que repete de acordo com a quantidade de elementos no array *neste exemplo=repete exibindo os elementos, o indice e o array como string* 
+            // toString: converte o array em string 
+            arr.forEach(function(el, i, arr){
+                console.log("el", el, "  |  i=", i, "  |  i - ", arr.toString());
+            })
+            // indexOf: retorna a posição do elemento no array *pode ser passado o idice para a qual deseja começar a busca*
+            var posicaoStr1 = arr.indexOf(20, 5);
+            console.log("posicaoStr1", posicaoStr1);
+            // lastIndexOf: retornar a posição do elemento porem do final pro começo *pode ser passado o indice para qual ele deseja buscar para trâs*
+            var posicaoStr2 = arr.lastIndexOf(20, 5);
+            console.log("posicaoStr2", posicaoStr2);
+
+            // map: quando precisar modificar o os elementos do array e retornar eles para o mesmo local 
+            console.log(numeros);
+            numeros = numeros.map(function(el, i, arr){
+                return el * i;
+            });
+            console.log(numeros);
+
+            // concat: junta os 2 arrays 
+            var arr2 = arr.concat(numeros, "ola", "arr2", 100);
+            console.log(arr2);
+            
+            // join: converte o array em string podendo ser passado um separador dos elementos
+            var str = arr2.join("*-*");
+            console.log(str); 
+
+            // adiciona mais itens no final do array
+            arr.push("novo", "item");
+            console.log(arr);
+             
+            //retira itens do final do array  
+            var ultimoItem = arr.pop();
+            console.log(ultimoItem);
+            console.log(arr);
+
+            // retira o primeiro item do array 
+            primeiroItem = arr.shift();
+            console.log(typeof primeiroItem);
+            console.log(arr);
+
+            // adiciona mais itens no inicio do array 
+            arr.unshift(true, false, "unshift")
+            console.log(arr); 
+
+            // reduce: realiza ação com os elementos anterior e atual dos arrays *exemplo mostra usando a operação de somar*
+            numeros.shift();
+            var somaDeArr= numeros.reduce(function(anterior, atual, i){
+                console.log("anterior ", anterior, " |  atual ", atual , " |  i " , i); 
+                return anterior + atual + i;
+            },10);
+            console.log(numeros);
+            console.log(somaDeArr);
+            // exemplo com strings 
+            var testeReduce = ["1", "2", "3"].reduce(function(i,a){
+                return i + a;
+
+            });
+              console.log(testeReduce);
+            
+            //reduceRight:inverte os elementos dentro do array
+              var testeReduce = ["1", "2", "3"].reduceRight(function(i,a){
+                return i + a;
+
+            });
+              console.log(testeReduce);
+
+            //reverse: iverte os elementos do array 
+              var arr = [10,20,30];
+              arr.reverse()
+              console.log(arr);
+
+             //slice: pega a partir do número inicial e adiciona o segundo número passado como parametro   
+              console.log(arr2.slice(2,5));
+            
+             //splice: a partir da posição 2 retira 3 elementos e adiciona o limão e melão
+              arr2.splice(2, 3, "limao", "melao");
+              console.log(arr2);
+              
+
+            
+
+  
+
+        </script>
+
+    </body>
+</html>

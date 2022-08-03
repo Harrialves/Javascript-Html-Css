@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <div class="container">
+        <h1>Curso Javascript</h1>
+
+      <!-- criação dos botões -->
+      <button>botão 1</button>
+      <button>botão 2</button>
+      <button>botão 3</button>
+    
+    </div>
+
+    <script>
+        
+        (function(){
+            "use strict";
+            // refêrencia do botão pela tag 
+            var $btns = document.getElementsByTagName("button");
+            
+            // loop para adicionar o evento listener em todos os botões 
+            for(var i= 0; i < $btns.length; i++){
+                $btns[i].addEventListener("click", clicou);
+            }
+            
+            // textContent: seleciona o que está dentro do botão  
+            function clicou(){
+                console.log(this.textContent);
+            }
+
+        })()
+           
+
+
+    </script>
+
+
+
+    </body>
+
+   
+
+
+</html>

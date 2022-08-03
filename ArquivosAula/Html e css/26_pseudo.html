@@ -1,0 +1,100 @@
+<!doctype html>
+<!--doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+ <title> pagina de exemplo estrutura basica</title>
+ <meta charset="urf-8">
+ <meta name="author" content="Harrison">
+ <meta name="description" content="Lista de documento">
+ <meta name="keywords" content="html5, tecnologia">
+ 
+ <style>
+    
+     
+     input[type="checkbox"]{
+         width: 100px;
+         height: 100px;
+     }
+
+     input[type="checkbox"]:checked{
+        width: 50px;
+         height: 50px;
+         outline:none;
+      
+     }
+
+     input[type="text"]:read-only{
+         background: yellow;
+     }
+     
+     
+     button:disabled{
+         background: blue;
+         outline:none;
+     }
+     p{
+         color:red;
+     }
+     /* empety conteúdo que aparece quando a tag está vazia*/
+     p:empty:before{
+         content: "paragrafo vazio não dá, né!";
+     }
+     /*aplicação do focus no input text*/
+     input[type="text"]:focus{
+         background: #ccc;
+         outline: none;
+     }
+
+     a:focus, a:hover, div:focus{
+         background: red;
+         outline:none;   
+     }
+
+    
+     input::placeholder{
+         color:red;
+
+     }
+     
+ </style>
+
+  
+
+</head>
+
+    <body>
+
+        <label><input type="checkbox" value="sim"> Aceito o contrato </label>
+        
+        <button>vai</button>
+         <!--desabilita o botão-->
+        <button disabled>volta</button>
+
+        <p>paragrafo 1</p>
+        <p> </p>
+        <p></p>
+        <hr> 
+        <input type="text">
+        <input type="text" value="valor inicial">
+        <input type="text" value="valor inicial" read-only>
+        <input type="text" value="valor inicial" disabled>
+        <input type="text" placeholder="valor do placeholder">
+    
+         
+        </ul>
+            <li><a href="#"> link flase</a></li>
+            <li><a href="#"> link flase</a></li>
+            <li><a href="#"> link flase</a></li>
+            <li><a href="#"> link flase</a></li>
+        </ul>
+
+         <!--tabindex: faz o conteúdo receber seleção-->
+        <div tabindex="1">div 1</div>
+        <div tabindex="2">div 2</div>
+        <div tabindex="3">div 3</div>
+
+    </body>
+</html>
+
+
+

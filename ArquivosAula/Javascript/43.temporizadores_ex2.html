@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript Completo</title>
+        <meta charset="utf-8">
+        
+        <style>
+            .banner{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 0 1000px rgba(0,0,0,.8);
+                display: none;
+            }
+            
+            .banner__close{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Javascript Completo</h1>
+        
+        <div class="relogio">
+        
+        </div>
+        
+        <script>
+            (function(){
+
+                var $relogio = document.querySelector(".relogio");
+
+             // criação das funções de exibição das horas 
+                function getHour(){
+                    var data = new Date();
+                    var h = formata(data.getHours());
+                    var m = formata(data.getMinutes());
+                    var s = formata(data.getSeconds());
+
+                    return h + ":" + m + ":" + s; 
+                }
+
+                //função que formata os números menores que 10 
+                function formata(t){
+                    return t < 10 ? "0" + t : t;
+                }
+
+                // exibe o relogio
+                function mostraRelogio(atual){
+                    $relogio.textContent = atual;
+                }
+
+                // chama a função que exibi as horas 
+                mostraRelogio(getHour()); 
+
+                // executa a função a cada 1 segundo 
+                setInterval(function(){
+                    mostraRelogio(getHour()); 
+                },1000); 
+              
+          
+            })()
+
+          
+
+
+            
+
+
+
+        </script>
+        
+    </body>
+</html>

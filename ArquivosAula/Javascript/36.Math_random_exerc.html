@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+        <script src=beluga.js></script>
+        <script>
+            (function(){
+                window.addEventListener("load", init);
+                
+                function init(){
+                    var n = sortear(5) + 1; 
+                    //.style.backgroundImage: forma de selecionar acessar as propiedades do style  
+                    document.querySelector("body").style.backgroundImage= "url(/images_2/"+ n +".jpg)"
+
+                }
+            })()
+        </script>
+
+
+    </head>
+    <body>
+        <h1>Curso Javascript</h1>
+
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <div class="container">
+        <h1>Curso Javascript</h1>
+
+        <!-- criação do formulário -->
+        <form action="#" method="POST">
+            <label for="txt">Usuário</label>
+            <input type="text" id="txtUser" name="user"><br>
+            <label for="txtPass">Senha</label>
+            <input type="password" id="txtPass" name="pass">
+            <br>
+            <button type="submit" id="btn">Logar</button>
+        </form>
+
+        </form>
+    </div>
+
+    <script>
+
+        (function(){
+            "use strict";
+            var $form = document.querySelector("form");
+            //Criação das variaveis que armazenam os campos do formulário 
+            var $txtUser = document.getElementById("txtUser");
+            var $txtPass = document.getElementById("txtPass");
+            var $btn = document.getElementById("btn");
+            //adicionando evento no botão de logar     
+            $form.addEventListener("submit", function(e){
+               
+                if(!$txtUser.value || !$txtPass.value){
+                    alert("Preencha todos os campos");
+                    //para a execução padrão do código
+                    e.preventDefault();
+                }
+                console.log("$txtUser");
+            }); 
+        
+        })()
+
+
+
+    </script>
+
+
+
+    </body>
+
+   
+
+
+</html>

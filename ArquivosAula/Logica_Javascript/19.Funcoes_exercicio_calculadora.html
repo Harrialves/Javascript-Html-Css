@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- criação dos botões da calculadora com as funções -->
+        <h1>Lógica de programação com Javascript</h1>
+        <button onclick="Somar()">+</button>
+        <button onclick="Subtrair()">-</button>
+        <button onclick="Multiplicar()">*</button>
+        <button onclick="Dividir()">/</button>
+            <!--Div onde será mostrado os resultados  -->
+            <div id="output"></div>
+
+            <script>
+                // criação da varial global 
+                var n=parseFloat(prompt("Digite um número"));
+
+                escreve();
+               
+                // função que escreve os valores na tela 
+                function escreve(){
+                    // var output = document.querySelector("#output");
+                    output.innerHTML = n;
+                    escreve();   
+                }
+               
+               //funções das operações 
+                function Somar(){
+                    var n1=parseFloat(prompt("Digite outro número"));
+                    n= n1+n;
+                    escreve();
+                      
+                }
+                
+                function Subtrair(){
+                    var n2=parseFloat(prompt("Digite outro número"));
+                    n = n-n2;
+                    escreve(); 
+                }
+
+                function Multiplicar(){
+
+                    var n3=parseFloat(prompt("Digite outro número"));
+                    n = n*n3;
+                    escreve(); 
+                }
+
+
+                function Dividir(){
+
+                    var n4=parseFloat(prompt("Digite outro número"));
+                    n = n/n4;
+                    escreve(); 
+                }
+
+
+            </script>
+
+    </body>
+</html>

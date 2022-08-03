@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript</h1>
+    </body>
+
+    <script>
+
+        var hoje = new Date();
+
+        var x = [0];
+         function mudaArr(x){
+            //passagem de objeto por referência 
+            var y = x;
+             y.push(2);
+             x.push(3);
+         }
+
+         mudaArr(x);
+         console.log("------");
+
+         var n = 0;
+         function mudaN(n){
+            //passagem por valores 
+            var n2 = n;
+             console.log(++n2); 
+
+         }
+         mudaN(n);
+         console.log(n);
+
+         console.log("-------");
+         
+         
+         
+         function mudaCor(cor){
+             this.cor = cor; 
+
+         }
+         
+         //  criação de um objeto 
+         var caneta1 = {
+            //propiedade
+            cor:"red",
+            // método 
+            mudarCor: mudaCor 
+            
+        }
+
+        var caneta2 = {
+            cor: "blue",
+            mudarCor: mudaCor
+        }
+
+        caneta1.mudarCor("green");
+        console.log(caneta1)
+        console.log(caneta2)
+
+        var caneta3 = new Caneta()d
+
+
+       
+
+
+    </script>
+
+
+</html>

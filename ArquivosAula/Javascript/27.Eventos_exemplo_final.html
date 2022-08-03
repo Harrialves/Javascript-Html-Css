@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <div class="container">
+        <h1>Curso Javascript</h1>
+        
+        <!-- criação do input para digitação da tarefa / botão de cadastrar -->
+        <input type="text" id="txtTask">
+        <button id="btn">Cadastrar tarefa</button>
+        
+        <!-- criação da ul com as li para armazenar a lista -->
+        <ul>
+            <li>Estudar Javascript - DOM</li>
+            <li>Estudar Eventos em Javascript</li>
+            <li>Jogar video-game</li>
+        </ul>
+        
+    </div>
+
+    <script>
+        
+        (function(){
+            "use strict";
+            // referência do html 
+            var $ul = document.querySelector("ul");
+            var $txtTask = document.querySelector("#txtTask");
+            var $btn = document.querySelector("#btn"); 
+            
+            // adiciona o evento de click no botão de cadastro 
+            $btn.addEventListener("click", function(){
+                // variavel que armazenará o valor da nova tarefa
+                var task = "<li>" + $txtTask.value + "</li>";
+                // concatenação da nova tarefa na lista 
+                $ul.innerHTML += task; 
+                // apaga o o campo do input após adicionar na lista
+                // coloca o foco no campo input 
+                $txtTask.value = "";
+                $txtTask.focus(); 
+            })
+
+
+        })()
+           
+
+
+    </script>
+
+
+
+    </body>
+
+   
+
+
+</html>

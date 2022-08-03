@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <div id="output"></div>
+    </body>
+
+    <script>
+        // criação do array de produtos. 
+        var produtos = new Array("caneta ", " lapis ", " tesoura "," borracha ",
+        " caderno "," livro ");
+        // adicionando mais produto 
+        produtos.push("tv", "carro", "moto");
+
+        var output = document.querySelector("#output");
+        // converte o array em string 
+        // output.innerHTML = produtos.toString();
+        
+        var msg="";
+        //propiedade length sempre retorna a quantidade de indices
+        for(i = 0; i < produtos.length; i++){
+            msg += "produto "+ (i+1) + ": " +produtos[i]+ "<br>";
+
+        }
+        output.innerHTML= msg; 
+
+
+    
+    </script>
+</html>

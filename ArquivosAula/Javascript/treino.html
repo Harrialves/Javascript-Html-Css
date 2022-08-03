@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+
+        <input type="text" id="campo" > <button onclick="escreve()">Só clica pae</button>
+        <div id="txtNome"></div>
+        
+        <script> 
+            var $txt = document.querySelector("#campo");
+            
+            function escreve(){
+                
+                var nome = $txt.value;
+                document.querySelector("#txtNome").innerHTML = "Bem vindo fiao "+ "<b>" + nome +"</b>"; 
+            }
+           
+    
+              
+          
+        </script>
+
+
+            
+      
+        
+    </body>
+</html>

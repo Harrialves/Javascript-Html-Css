@@ -1,0 +1,143 @@
+<!doctype html>
+<!--doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+ <title> pagina de exemplo estrutura basica</title>
+ <meta charset="urf-8">
+ <meta name="author" content="Harrison">
+ <meta name="description" content="Lista de documento">
+ <meta name="keywords" content="html5, tecnologia">
+
+</head>
+
+    <body>
+ <h1>Exemplo de formulario</h1>
+ <!--Criação do formulário e definição do metodo de transferencia-->
+ <form action="#" methoed="POST" class="formLogin">
+    <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <label>Email</label>
+        <!--placeholder:coloca uma mensagem de dica no campo de digitação-->
+        <!--tipos de input-->
+        <input type="email" required placeholder="digite um email valido">
+        <br>
+        <label>numero de filhos</label>
+        <!--min e max: define o valor do numero na caixa-->
+        <!--step: edita a quatidade de numeros que é adicionada-->
+        <input type="number" min="0" max="1000" step="0.5">
+
+
+        <br>
+        <label>nascimento</label>
+        <input type="date" min="2018-01-30" max="2138-01-30">
+     <!--atributo name define a seleção apenas de uma opção-->
+       <p>sexo</p>
+      <!--input dentro do label, faz a palavra ser selecionada-->
+       <!--type=radio: permite selecionar uma opção dentro das disponiveis-->
+      <label>
+
+           <input type="radio" name="sexo" value="M">
+           Masculino
+        </label>
+       <br>
+       
+       <label>
+        <input type="radio" name="sexo" value="F">
+        Feminino
+       </label>
+       <br>
+       <!--type hidden: esconde os dados dentro do formulario-->
+        <input type="hidden" name="expira" value="2018-12-30">
+
+
+     <!--Definindo opções de seleção-->
+        <label> Estado</label>
+        <select name="estado">
+            <option value="0">Selecione</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de janeiro</option>
+            <option value="MG">Minas Gerais</option>
+        </select>
+    </fieldset>
+    
+    <!--Criando caixa de selecão-->
+    <fieldset>
+        <legend>Área de interesse</legend>
+        <label>
+        <input type="checkbox" name="html" value="html">HTML</ipunt>
+       </label>
+
+       <label>
+        <input type="checkbox" name="css" value="html">CSS</ipunt>
+       </label>
+
+
+       <label>
+        <input type="checkbox" name="Javascript" value="html">Javascript</ipunt>
+       </label>
+
+    </fieldset>
+    <!--define campo de texto maior-->
+    <fieldset>
+        <legend>Mensagem</legend>
+        <!--cols: quantidade de colunas-->
+        <!--rows quantidade de linhas-->
+        <!--Rise:none retira a opção de formatação da area de mensagem-->
+       <!--maxlength: defini a quantidade  máxima de caracteres a ser digitado-->
+        <textarea style="resize:none" name="msg" 
+        cols="30" rows="10" maxlength="10"></textarea>
+
+        <textarea style="resize:none" name="contrato" 
+        cols="30" rows="10" readonly>Aqui entra o texto do  contrato que precisa ser aceito
+    </textarea>
+        <!--Checked: marca como checado a checkbox já inicialmente-->
+    <label><input type="checkbox" checked>Li e aceito</label>
+
+
+        <!--range:adiciona uma barra de aumento a ser tratada-->
+        <!--Atributos min max e step adicionam valores para controlar o "range"-->
+        <input type="range" min="0" max="10" step="2">
+        <input type="time">
+        <input  type="color">
+        
+  
+        <!--size: define a quantidade de opções que é possivel selecionar--> 
+        <!--multiple: permite selecionar mais de uma opção-->
+        <select size="5" multiple>
+            <option>opcao 1</option>
+            <option>opcao 2</option>
+            <option>opcao 3</option>
+            <option>opcao 4</option>
+            <option>opcao 5</option>
+            <option>opcao 6</option>
+            <option>opcao 7</option>
+
+        </select>
+
+    </fieldset>
+
+        <br>
+        <input type="submit" value="mandar">
+        <!--botão a ser tratado-->
+        <input type="button" value="bottun">
+        <!--reset: reseta as informações adicionas-->
+        <input type="reset" value="limpar formulario">
+        
+
+        
+
+
+
+
+
+
+     
+
+  </form>
+
+</body>
+</html>
+
+
+

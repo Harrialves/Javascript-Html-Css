@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+        <h1>Curso Javascript</h1>
+
+    </head>
+ <body>
+   
+
+     <script>
+         (function(){
+
+            var nome = "Daniel Tapias Morales"
+
+            var nomeFormatado = formatarNome(nome);
+        
+            function formatarNome(nome){
+                // lastIndexOf: conta os caracteres até o último espaço 
+                var posicaoUltimoEspaco = nome.lastIndexOf(" ");
+                if(posicaoUltimoEspaco <= 0){
+                    return nome; 
+                }
+                // corta a partir do número informado no parenteses 
+                var ultimoNome = nome.slice(posicaoUltimoEspaco+ 1);
+                console.log("ultimoNome", ultimoNome);
+
+                var primeiroNome = nome.slice(0, posicaoUltimoEspaco);
+                console.log("posicaoUltimoEspaco", posicaoUltimoEspaco);
+
+                return ultimoNome +", " + primeiroNome;
+                debugger;
+            }
+
+            console.log(nomeFormatado);
+
+
+         })()
+
+
+
+        
+        
+    </script>
+
+
+
+ </body>
+
+   
+
+
+</html>

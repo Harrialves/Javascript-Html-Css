@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <div class="container">
+        <h1>Curso Javascript</h1>
+        <!-- maxlength: limita a quantidade de caracteres que pode ser digitado -->
+        <textarea id="msg" cols="50" rows="10" maxlength="100"></textarea>
+        <!-- exibe o restam caracteres e faz a refrencia pelo id resta /  e esconde do usuário quando tem apenas o html-->
+        <div id="restaContainer" style="display: none;">Restam <span id="resta"></span> caracteres</div> 
+    </div>
+
+    <script>
+        
+        (function(){
+            "use strict";
+        
+            var $restaContainer = document.getElementById("restaContainer"); 
+            var $txtMsg = document.getElementById("msg");
+            
+            // faz referencia atrâves do id na span
+            var $resta = document.getElementById("resta");
+            
+            // armazena o tamanho máximo de caracteres de acordo com a maxlength
+            var maxima = $txtMsg.maxLength;
+            
+            // muda o display da div e a torna visivel 
+            mostrarContainer();
+            // resta recebe o valor de máxima e exibe na tela 
+            mostrarCaracteres(maxima);
+            $txtMsg.addEventListener("input", checkLength);
+
+            
+            function checkLength(e){
+                // recebe o numero das letras digitadas 
+                var numeroLetrasDigitadas = this.value.length;
+                // resta recebe o valor de máxima menos o numero de caracteres digitadas 
+                var caracteresRestantes  = parseInt(maxima) - parseInt(numeroLetrasDigitadas);
+                mostrarCaracteres(caracteresRestantes);
+            }
+
+            // função que exibe o restante dos caracteres 
+            function mostrarCaracteres(n){
+                $resta.textContent = n;
+    
+            }
+
+            function mostrarContainer(){
+              $restaContainer.style.display = "block";
+            }
+            
+        
+        })()
+
+
+
+    </script>
+
+
+
+    </body>
+
+   
+
+
+</html>

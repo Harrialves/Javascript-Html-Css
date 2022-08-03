@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1> 
+        
+        <button onclick="mostrarArea()">Área total</button>
+        <button onclick="mostrarAreaOutput()">Área total no output</button>
+
+        <div id="output"></div>
+        
+        <script>
+        
+            function mostrarArea(){
+                var largura= parseFloat(prompt("Digite a largura do retangulo"));
+                var altura = parseFloat(prompt("Digite a altura do retangulo número"));
+
+                try{
+                    var area = calcularArea(largura, altura);
+                }catch(e){
+                   area = e; 
+                }
+
+                alert("A área total é: "+ area);
+            }
+
+            function mostrarAreaOutput(){
+                var largura= parseFloat(prompt("Digite a largura do retangulo"));
+                var altura = parseFloat(prompt("Digite a altura do retangulo número"));
+
+                try{
+                    var area = calcularArea(largura, altura);
+                }catch(e){
+                   area = e; 
+                }
+
+
+                document.querySelector("#output").innerHTML = "A área total é: "+ area;
+
+            }
+
+            mostrarArea();
+
+            function calcularArea(l,a){
+                if(l === undefined || a === undefined){
+                    throw new Error("CalcularArea precisa receber dois números");
+                }
+                
+                if(isNaN(l) || isNaN(a)){
+                    throw new Error("Somente números");
+                }
+                return l * a;
+
+            }
+
+
+
+        </script>
+    
+    </body>
+    
+    
+
+
+
+</html>

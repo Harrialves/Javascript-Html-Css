@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript</h1>
+    </body>
+
+    <script>
+        //função construtora 
+        function Caneta(preco, cor){
+            // propiedade privada usa var 
+            var color = cor || "black";
+            // propiedade publicas usa this 
+            this.preco = preco || 1;
+            // função que muda a probiedade cor 
+            this.mudarCor = function(cor){
+                if(cor !== "red" && cor !== "blue" && cor !== "black"){
+                    return; 
+                } 
+                color = cor;
+            }
+            //função que mostra a cor 
+            this.pegaCor = function(){
+            return color;
+        }
+        
+        }
+
+         // passagem de valores por parametro para função construtora 
+        var caneta1 = new Caneta(10, "red");
+
+        
+
+        
+
+
+    </script>
+
+
+</html>

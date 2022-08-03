@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+
+        <script>
+            (function(){
+
+                // criação da variavel que recebera o objeto dia 
+                var dataAtual = new Date();
+                // recebe o ano atual 
+                var anoAtual = dataAtual.getFullYear();
+                dataAtual.setHours(0);
+                dataAtual.setMinutes(0);
+                dataAtual.setSeconds(0);
+                dataAtual.setMilliseconds(0);
+
+                // recebe a data do aniversario desse ano 
+                var dataNiver = new Date(anoAtual, 11, 16);
+                
+                // recebe o horario da data atual 
+                var dataAtualTS = dataAtual.getTime();
+                // recebe o horario da data de aniversário 
+                var dataNiverTS = dataNiver.getTime();
+                
+                if (dataNiverTS === dataAtualTS){
+                    alert("Parabens pelo seu aniversario");
+                    return; 
+                }
+
+                // verifica se o anivarsario já passou ou não 
+                if(dataNiverTS < dataAtualTS){
+                    // definindo o anp de aniversário e adicionando mais 1 ao ano caso o aniversário já tenha passado 
+                    dataNiver.setFullYear(++anoAtual);
+                    // pega novamente o horario do novo ano 
+                    dataNiverTS = dataNiver.getTime(); 
+                }
+
+                // quantos milisegundos tem em 1 dia 
+                const UM_DIA_TS = 24 * 60 * 60 * 1000;
+                
+                var diferenca = dataNiverTS - dataAtualTS;
+                alert(diferenca / UM_DIA_TS);
+               
+            })()
+
+        </script>
+
+
+
+
+    </head>
+    <body>
+        <h1>Curso Javascript</h1>
+
+        
+    </body>
+</html>

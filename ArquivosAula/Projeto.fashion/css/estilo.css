@@ -1,0 +1,195 @@
+body{
+    /*configuração da fonte do site*/
+    font-family: tahoma, arial, sans-serif;
+    /*Retirando a margin e o padding padrões*/
+    margin: 0;
+    padding: 0;
+   
+    
+}
+
+/*Centraliza a pagina como um todo*/
+#principal{
+    /*reajuste central da pagina*/
+    width: 1024px;
+    /*20px ajustando a altura da pagina*/
+    margin:20px auto;
+    
+    
+    
+}
+
+/*Ajusta o logitpo na pagina*/
+.logotipo{
+    margin-left: 170px;
+}
+
+/*Cor de fundo do logotipo*/
+.header-top{
+    background-color: #162028;
+    height: 50px;
+    /*ajuste de position*/
+    position:relative;
+   
+}
+
+/*Ajustando o menu de navegação*/
+.header-nav{
+    top:0;
+    right: 0;
+    /*ajustndo a posição de acordo com header-top*/
+    position: absolute;
+    /*Ajustando a altura*/
+    height: 100%;   
+}
+
+/* Ajustado conteudo da li*/
+header nav li{
+    /*Ajusta a li na lateral*/
+    display: inline-block;
+    list-style: none;
+    margin:0 15px 0 0;
+    /*Ajuste da altura das li*/
+    padding: 15px;
+   /*transforma em letras maisculas*/
+    text-transform: uppercase;
+    /*regula o espaçamento entre as letras*/
+    letter-spacing: 5px;
+}
+
+/*redefinindo os valores padrões da nav ul*/
+.header-nav ul{
+    margin:0;
+    padding:0;
+
+}
+/*Ajustes no link de navegação*/
+.header-nav a{
+    color:#425564;
+    text-decoration: none;
+    font-size: 12px;
+    /*Efeito de trasição do menu nav*/
+    transition:color 0.3s linear;
+
+}
+
+.header-nav a:hover{
+    color:white;
+}
+
+
+
+/*ajuste da altura do titulo e do p*/
+.portfolio{
+ padding: 50px 100px ;
+ 
+}
+/*ajustes no titulo central1*/
+.portfolio h1{
+    text-align: center;
+    font-size:36px;
+    color:black;
+    
+
+}
+
+/*Ajustes no paragrafo central1*/
+.portfolio p{
+    font-size:16px;
+    text-align: center;
+    color:#555;
+    /*espaçamento entre as linhas do paragrafo (2): a espaço duplo*/
+    line-height:2;
+
+}
+
+/*ajuste das imagens para a esquerda*/
+.gallery{
+    color:#555;
+    padding: 0px 100px 50px 100px;
+    /*ajusta o preechimento das imagens*/
+    overflow: auto;  
+}
+
+/*ajuste dos cards no centro da pagina*/
+.gallery-card{
+    text-align: center;
+    width: 32%;
+    /*passa as imagens para a esquerda*/
+    float:left;
+}
+
+.gallery-title{
+    text-transform: uppercase;
+    /*regula o espaçamento entre as letras*/
+    letter-spacing: 4px;
+    /* bold: deixa a font em negrito*/
+    /*font-weight: "peso" largura das letras*/
+    font-weight: bold;
+    font-size:16px;
+}
+
+/*Ajuste da imagem de fundo*/
+.about{
+    background-color: #003d52;
+    padding:100px;
+    color:white;
+    background-image: url(../imagens/bg_detalhe.png);
+    /*tira a repetição da imagem*/
+    background-repeat: no-repeat;
+    /*posiciona a imagem a direita abaixo*/
+    background-position: right bottom;
+    
+}
+
+/*configuração do segundo titulo*/
+.about h2{
+    font-size:50px;
+    text-transform: uppercase;
+    font-weight:normal;
+
+}
+/*configuração dos paragrafos*/
+.about p{
+    line-height: 1.5;
+    width: 70%;
+
+}
+/*configuração dos contatos da pagina*/
+#contact{
+    margin: 50px 0;
+}
+
+/*configuração dos dados de contato*/
+#contact address{
+    color: #143f52;
+    text-transform: uppercase;
+    font-size:26px;
+    font-style: normal;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*configuração do mapa*/
+.maps{
+    width: 100%;
+    height:450px;
+    margin-top:15px;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.maps iframe{
+    width:100%;
+}
+
+.rodape{
+    background: #0b171f;
+    padding:25px;
+    font-size:12px;
+    color: #6f8597;
+    letter-spacing: 5px;
+    text-align: center;
+
+}

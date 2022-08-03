@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <button onclick="mostrarTabuada()">Criar Tabuada</button>
+        <button onclick="limparTabuada()">Limpar Tabuada</button>
+
+        <div id="output"></div>
+
+        <script>
+            //acessa a o HTML 
+            var output =document.querySelector("#output");
+            
+            var mensagem= " "
+            for(var i=0; i<1001; i++){
+                mensagem +="i: "+i+ "<br>";
+            }
+            
+            
+            
+            //altera o HTML 
+            output.innerHTML = mensagem; 
+
+
+
+
+        </script>
+
+    </body>
+</html>

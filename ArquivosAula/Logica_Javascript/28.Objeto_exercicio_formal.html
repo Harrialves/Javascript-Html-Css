@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação Javascript</title>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        <div id="output"></div>
+    </body>
+
+    <script> 
+  
+
+    var caneta = new Object();
+    caneta.nome ="bic";
+    caneta.preco = 2;
+    caneta.quantidade = 50;
+
+    caneta.comprar = function(qtd){
+        if(!qtd){
+            qtd = 1;
+        }
+        console.log("Comprou caneta");
+        this.quantidade--;
+        console.log(this.quantidade);
+    }
+
+
+    alert("Objeto: "+caneta);
+
+    var msg= "";
+    msg +="nome: "+ caneta.nome + "<br>";
+    msg +="preco: "+ caneta.preco + "<br>"
+    msg +="quantidade: "+ caneta.quantidade + "<br>"
+
+    document.querySelector("#output").innerHTML = msg
+
+
+
+
+
+    </script>
+</html>

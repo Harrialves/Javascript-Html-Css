@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- criação dos botões da calculadora com as funções como parametro -->
+        <h1>Lógica de programação com Javascript</h1>
+        <button onclick="calcular('+')">+</button>
+        <button onclick="calcular('-')">-</button>
+        <button onclick="calcular('*')">*</button>
+        <button onclick="calcular('/')">/</button>
+            <!--Div onde será mostrado os resultados  -->
+            <div id="output"></div>
+
+            <script>
+                // criação da varial global 
+                var n=parseFloat(prompt("Digite um número"));
+
+                escreve();
+               
+                // função que escreve os valores na tela 
+                function escreve(){
+                    var output = document.querySelector("#output");
+                    output.innerHTML = n;
+                    escreve();   
+                }
+               
+                //função que calcula atravês de um valor pasado pelo parametro o resultado da operação    
+                function calcular(simbolo){
+                    var n1=parseFloat(prompt("Digite outro número"));
+                    // uso do switch case para verificar qua
+                    switch(simbolo){
+                        case '+':
+                            n +=n1;
+                            break; 
+                       
+                        case '-':
+                            n -=n1;
+                            break; 
+                        
+                        case '*':
+                            n *=n1;
+                            break; 
+                        
+                        case '/':
+                            n /=n1;
+                             
+                    }
+                        escreve();
+                      
+                }
+                
+
+
+            </script>
+
+    </body>
+</html>

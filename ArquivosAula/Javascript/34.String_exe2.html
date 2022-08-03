@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+
+        <h1>Curso Javascript</h1>
+       
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it.
+        </p>
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it.
+        </p>
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+         when an unknown printer took a galley of type and scrambled it.
+        </p>
+
+    </head>
+ <body>
+   
+
+     <script>
+         (function(){
+
+            $paragrafos = document.querySelectorAll("p");
+            
+            var x = 0;
+            while($paragrafos[x]){
+                $paragrafos[x].innerHTML = formatarTexto($paragrafos[x].innerHTML);
+                x++; 
+            }
+            function formatarTexto(texto){
+                var numeroMax = 200;
+                if(texto.length <= numeroMax){
+                    return texto;
+                } 
+               
+             var subTexto = texto.slice(0, numeroMax);
+             return subTexto + "..."; 
+                
+            }
+
+    
+         })()
+
+
+
+        
+        
+    </script>
+
+
+
+ </body>
+
+   
+
+
+</html>

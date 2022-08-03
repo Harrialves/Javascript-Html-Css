@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript</h1>
+
+
+        <script>
+
+            // criação da varive que armazena o dia 
+            var data = new Date();
+
+            // definindo os valores do dia e do mês
+            data.setDate(2);
+            data.setMonth(2);
+
+          
+            // função que formata a data no estilo brasileiro 
+            function formatDate(data){
+                var dia = data.getDate() < 10 ? '0' + data.getDate() :
+                data.getDate(); 
+    
+                var mes = data.getMonth() + 1 ;
+                mes = mes < 10 ? "0" + mes: mes;
+                
+                return dia + "/"  + mes + "/" + data.getFullYear();
+            }   
+ 
+            // chamada da função 
+            console.log(formatDate(data))
+
+    </script>
+
+        
+    </body>
+</html>

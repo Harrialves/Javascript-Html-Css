@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+
+        <script>
+            // função literal 
+            function somar(n1, n2){
+
+                return n1+n2;
+            }
+
+            var soma = somar(10, 20);
+            console.log('resultado: ', soma);
+
+            // adiciona uma propiedade "teste" à função  e recebe uma string 
+            somar.teste = "propriedade da funcao";
+            console.log(somar.teste); 
+
+            // função anônima e função passada por parametro 
+            var teste = function(f){
+              f();
+            };
+
+            teste(function(){
+                console.log("funcao passada por parametro");
+            }); 
+
+            console.log('-----------------------------');
+
+            // varial global  
+            var x = 0;
+            var y;
+
+            function mostrarX(){
+                var x = 10; //escopo local (colocar var ou let)
+                var y = 20;
+                console.log("mostra x dentro: " , x);
+                console.log("mostra y dentro: " , y);
+            }
+            mostrarX()
+
+            console.log("mostra x fora: " , x);
+            console.log("mostra y fora: " , y);
+
+           
+            //função auto invocaveis     
+            (function(){
+                // não permitir a criação de varial sem var ou let
+                'use strict';
+                var isValid = false;
+                cosole.log(isValid);
+
+                function somar(arr){
+                    console.log(arguments);
+                    console.log("result: ");
+                }
+
+                somar(20, 20, 10, 30);
+            })();
+
+            
+       
+
+
+        </script>
+        
+
+
+
+
+    </head>
+    <body>
+        <h1>Curso Javascript</h1>
+
+        
+    </body>
+</html>

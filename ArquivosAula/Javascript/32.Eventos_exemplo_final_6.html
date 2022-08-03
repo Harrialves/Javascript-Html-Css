@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+
+
+        <style>
+            .done{
+                text-decoration: line-through;
+                color: red;
+            }
+        </style>
+
+    </head>
+    <body>
+    <div class="container">
+        <h1>Curso Javascript</h1>
+        
+        <!-- criação do input para digitação da tarefa / botão de cadastrar -->
+        <input type="text" id="txtTask">
+        <button id="btn">Cadastrar tarefa</button>
+        
+        <!-- criação da ul com as li para armazenar a lista -->
+        <ul>
+            <li>Estudar Javascript - DOM</li>
+            <li>Estudar Eventos em Javascript</li>
+            <li>Jogar video-game</li>
+        </ul>
+        
+    </div>
+
+    <script>
+        
+        (function(){
+            "use strict";
+            // referência do html 
+            var $ul = document.querySelector("ul");
+            var $lis = $ul.querySelectorAll("li");
+            var $txtTask = document.querySelector("#txtTask");
+            var $btn = document.querySelector("#btn"); 
+            
+            // adiciona o evento de click no botão de cadastro 
+            $btn.addEventListener("click", addTask);
+            
+            //atribuição da leitura da tecla presionada enter para adicionar a lista
+            $txtTask.addEventListener("keyup", function(e){
+                //keyCode: mostra o código da teclada presionada e chamada a função    
+                if(e.keyCode === 13){
+                    addTask();
+
+                }
+
+            });
+            // adicinando evento de listener na ul 
+            $ul.addEventListener("click", function (e){
+                // ao clicar verifica se é uma li
+                if(e.target.nodeName === "LI"){
+                    // chama a função passando a própria li 
+                    removeTask(e.target);
+                }
+            })
+
+            function removeTask(li){
+                //confirm: retorna um boleano que se true executa o if
+                // li.textContent: seleciona o conteúdo de texto da li e exibe na tela
+                if(confirm("deseja realmente excluir a tarefa \n"+ li.textContent + "?")){
+                    console.log(li.parentNode);
+                    //parentNode: acessa o pai do iten especificado 
+                    // removeChild: remove o filho sendo no caso a li que foi clicada  
+                    li.parentNode.removeChild(li);
+
+                }
+            }
+
+             //função que adiciona mais uma tarefa na lista
+            function addTask(){
+                // variavel que recebe a criação de uma nova li
+                var li =document.createElement("li");
+                // variavel que armazena o conteúdo dessa nova li
+                var text = document.createTextNode($txtTask.value);
+                // adicionando o texto dentro da li
+                li.appendChild(text);
+                // adicionando a li dentro da ul
+                $ul.appendChild(li);
+
+                $txtTask.value = "";
+                $txtTask.focus();
+
+            }
+               
+        })()
+           
+
+
+    </script>
+
+
+
+    </body>
+
+   
+
+
+</html>

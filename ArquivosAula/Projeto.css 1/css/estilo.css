@@ -1,0 +1,138 @@
+body{
+    /*Edição da fonte do site e a cor de fundo*/
+    font-family: arial, sans-serif;
+    background-color: #ccc;
+    margin:0px;
+
+}
+
+.hero{
+    background-image: url(../imagens/bg-1.jpg);
+/*buscar imagens de outras pastas*/
+/*Colocando imagem de fundo e ajustando*/
+ height: 500px;
+ background-position: right center;
+ background-size: cover; 
+ border: 1px solid transparent;
+}
+
+/*edição do titulo central do site*/
+.hero-content{
+    text-align:center;
+    color: white;
+    margin-top: 150px; 
+}
+
+.hero-content p{
+    background:rgba(0, 0, 0, 0.6);
+    padding:15px;
+    border-bottom-style: solid;
+    border-color:#ccc;
+    display: inline-block;
+    
+}
+/* Apolicação de css no h1 que está dentro da class hero-content*/
+.hero-content h1{
+    text-transform:uppercase;
+    /*transforma letras em maisculas*/
+    font-size: 46px;
+    text-shadow: 3px 3px 2px #333;
+    /*aplicação de sombreamento nas palavras*/
+}
+
+.hero nav li{
+    /*Muda o display para não ocupar todo o espaço lateral*/
+    display: inline-block;
+    list-style: none;
+    border: 1px solid white;
+    margin-left:10px;    
+}
+
+.hero nav ul{
+    text-align: right;
+    margin: 20px 50px 0 0;
+
+}
+
+.hero nav a:hover{
+    background:rgba(0, 0, 0, 0.5);
+}
+
+
+.hero nav a{
+    background:rgba(0, 0, 0, 0.2);
+    /*coloca transparencia nas cores*/
+    display:block;
+    padding:15px;
+    color:white;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:11px;
+    letter-spacing: 2px;
+    /*espaçamento das letras*/
+}
+
+
+/*Ajuste da parte principal do site*/
+main{
+ width: 80%;
+ margin: auto;
+
+}
+
+/*Criando o fundo para a parte principal(main)*/
+.content-section{
+    background-color:white;
+    padding: 10px;
+   
+    /*criando a quebra no fundo branco da parte main*/
+    margin-top:15px;
+    overflow:auto;
+    /* reajuste do float*/
+}
+
+.card{
+    width: 32%;
+   float:left;
+   /* posiciona a imagem a esquerda*/
+}
+.card-1, .card-2{
+    margin-right: 2%;
+
+
+}
+
+.card p{
+    background-color: rgb(44, 43, 43);
+    color:white;
+    margin: 0px;
+    padding: 13px;
+}
+
+.card img{
+    width:100%;
+    display: block;
+}
+
+.content-section h2{
+    color:black;
+    background-color: rgb(226, 226, 226);
+    border-bottom-style: solid;
+    border-color:#ccc;
+    padding:15px;
+}
+    
+
+.rodape{
+    text-align: center;
+    color:white;
+    background-color:grey;
+    padding: 15px;
+    margin-top:20px;
+    text-shadow: 2px 2px 2px black;
+    font-size: 13px;
+}
+
+
+
+

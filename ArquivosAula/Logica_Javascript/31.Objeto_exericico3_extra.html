@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação Javascript</title>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        <div id="output"></div>
+    </body>
+    <script>
+
+        var clientes =[
+            {"nome": "Samara", "email":"samara@hotmail.com" },
+            {"nome": "Keren", "email":"keren@hotmail.com" },
+            {"nome": "Victoria", "email":"victoria@hotmail.com"},
+        ];
+
+        var msg ="";
+        for( var i = 0; i < clientes.length; i++){
+            msg += "<h2>Nome:  "+clientes[i].nome+"</h2>";
+            msg += "<p>email: "+clientes[i].email+"</p>";
+            
+        }
+
+        document.querySelector("#output").innerHTML= msg; 
+    </script>
+</html>

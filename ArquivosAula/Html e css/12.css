@@ -1,0 +1,28 @@
+#um{
+    background-color: red;
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+}
+
+#dois{
+
+    background-color: orange;
+    padding: 10px;
+    width:80%;
+    height:50px;
+    position:relative;
+    /*posiciona relativamente ao próprio elemento*/
+}
+
+#tres{
+ background-color: yellow;
+ width:25px;
+ height: 25px;
+ position: absolute;
+ /*Se relaciona com a posição do anterior*/
+ /*position: fixed; fixa o elemento*/
+ bottom:10px;
+ 
+
+}

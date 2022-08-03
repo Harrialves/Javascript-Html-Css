@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <div class="container">
+        <h1>Curso Javascript</h1>
+
+        <form action="#">
+            <!-- textarea com o contrato/ cols e rows definem o tamanho do textarea -->
+            <textarea  cols="50" rows="10" readonly> Contrato de serviços prestados
+            </textarea>
+            <br>
+            <!-- criação da caixa de checkbox-->
+            <label>
+                <input type="checkbox" id="chk" checked>Li e aceito os termos desse 
+                contrato
+            </label>
+            <br>
+            <!-- criação do botão de continuar -->
+            <input type="submit" value="Continuar" id="btn"> 
+
+
+        </form>
+      
+    </div>
+
+    <script>
+        
+        (function(){
+            "use strict";
+            // referência aos elementos do html botão e checkbox 
+            var $btn = document.getElementById("btn");
+            var $chk = document.getElementById("chk");
+            
+            //adicionando ação de mudança no checkbox
+            $chk.addEventListener("change", function(){
+                toggleBtn();
+            });
+
+            // função que disabilita o botão continuar se o checkbox estiver desabilitado 
+            function toggleBtn(){
+               $btn.disabled = !$chk.checked; 
+            }
+
+        })()
+           
+
+
+    </script>
+
+
+
+    </body>
+
+   
+
+
+</html>

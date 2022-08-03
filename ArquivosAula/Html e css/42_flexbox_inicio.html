@@ -1,0 +1,258 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+           
+           
+           
+           .flexbox{
+                height: 250px;
+                border: 1px solid red;
+                /*faz a classe flexbox, se tornar um flex container(obs:display itens: filhos que estçao dentro do container)  */
+                display:flex;
+                /* modifica os filhos*/
+                flex-direction: row;
+                /* se não caber mais elementos ele ira quebrar a linha */
+                flex-wrap: wrap;
+                margin-bottom: 15px;
+            }
+            
+            .flexbox div{
+                background: orange;
+                width: 70px;
+                margin: 15px;
+            }
+
+            .flexbox:nth-child(4){
+                background-color: blue;
+                width: 300px;
+                margin: 15px;
+
+            }
+            .flexbox:nth-child(5){
+                justify-content:space-between
+             
+            }
+            .flexbox:nth-child(5){
+                width:300px;
+             
+            }
+
+            .flexbox:nth-child(5){
+               align-items:center;
+               justify-content:center;
+            }
+
+            .flexbox:nth-child(6){
+              width: 30px;
+            }
+            .flexbox:nth-child(7){
+               align-items:center;
+               justify-content:center;
+            }
+            
+           
+            .flexbox:nth-child(9) div{
+                justify-content: center;
+                align-items: center;
+                
+
+            }
+           
+           
+            .flexbox:nth-child(9) div{
+                width: 100px;
+                background-color: yellow;
+                flex-basis: 50px;
+                height:50px ;
+            }
+            
+            .flexbox:nth-child(10) div{
+                justify-content: center;
+             
+                align-items: center;
+            }
+           
+           
+            .flexbox:nth-child(10) div{
+                width: 100px;
+                background-color: yellow;
+                flex-basis: 50px;
+                height:50px ;
+            }
+
+            .flexbox:nth-child(10) div:nth-child(2){
+                flex-grow: 2;
+            }
+
+            .flexbox:nth-child(10) div:nth-child(4){
+                flex-grow: 1;
+            }
+
+            .flexbox:nth-child(11) div{
+                width: 100px;
+                background-color: yellow;
+                flex-basis: 50px;
+                height:50px ;
+            }
+
+            .flexbox:nth-child(11) div:nth-child(2){
+                flex-shrink: 2;
+            }
+
+            /* modifica a ordem */
+            .flexbox:nth-child(11) div:nth-child(4){
+                order:3;
+            }
+            
+            .flexbox:nth-child(12) div:nth-child(2){
+                order:3;
+            }
+            .flexbox:nth-child(12) div:nth-child(4){
+                order:2;
+            }
+            .flexbox:nth-child(12) div:nth-child(3){
+                order:4;
+            }
+
+            .flexbox:nth-child(13){
+                align-items: flex-start;
+                
+
+            }
+            .flexbox:nth-child(13) div:nth-child(2){
+                align-items: flex-start;
+                align-self: flex-end;
+            }
+            .flexbox:nth-child(13) div:nth-child(3){
+                align-items: flex-start;
+                align-self: center;
+            }
+            .flexbox:nth-child(13) div:nth-child(3){
+                align-items: flex-start;
+                align-self: center;
+            }
+            .flexbox:nth-child(13) div:nth-child(3){
+                align-items: flex-start;
+                align-self: stretch;
+            }
+
+
+
+
+       
+
+            
+               
+               
+
+               
+               
+
+
+               
+               
+
+
+            
+            
+            
+        </style>
+    </head>
+    <body>
+        <h2>Display Flex</h2>
+        <p>Acomodar ou distribuir elementos de modo fácil</p>
+        <p>Ajuda a centralizar na vertical</p>
+        
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+          
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>

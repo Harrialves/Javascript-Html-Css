@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+    </body>
+
+    <script>
+        // criação do array para armazenar os números
+        var arr = new Array(25, 30, 45, 28, 0, 12 ,78, 64);
+         
+        // atribui a função a uma nova varial a qual é mostrada na tela
+        var somapares= somaOspares(arr);
+        alert("A soma dos números pares é: "+somapares);
+
+        // criação da função que realiza o calculo da operação 
+        function somaOspares(arr){
+            var total = 0;
+            // criação do for para somar os números pares 
+                
+            for(var i = 0; i<arr.length; i++){
+            //   condição para definir os números pares
+                if(!isNaN(arr[i])&& arr[i]%2===0){
+                    //soma dos pares a cada loop do for e adiciona a variavel soma  
+                    total += arr[i];
+                    
+                    
+                }
+            }
+            return total;
+        }
+        
+       
+    </script>
+</html>

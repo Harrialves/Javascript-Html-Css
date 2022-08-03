@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos</title>
+</head>
+<body>
+
+    <h1 id="title">Esse é o meu primeiro código jQuery</h1>
+
+    <img src="hcode.png">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+
+        function initPage(){
+            alert("Minha pagina carregou");
+            console.log("Pagina ok");
+        }
+
+        function stylizeTitle(){
+            
+            document.getElementById("title").style.color ="red";
+
+        }
+
+        // window.onload = initPage;
+
+        $(document).ready(function(){
+            initPage();
+            stylizeTitle();
+        });
+         
+
+
+
+        //Maneira antiga de se fazer código JS
+        /*
+        window.onload = function(){
+
+            alert("Minha página carregou");
+        }
+        */
+
+        // jQuery(document).ready(function(){
+
+        //     alert("Minha página carregou com jQuery")
+        // });
+
+    </script>
+</body>
+</html>
